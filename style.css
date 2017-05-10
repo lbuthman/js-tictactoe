@@ -15,6 +15,15 @@ body {
     margin-top: -5%;
 }
 
+#choose-players {
+    background: #FCDEBE;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 8px;
+    padding: 10px 10px 20px 10px;
+    margin-top: 10%;
+}
+
 #background {
     background: black;
     max-width: 400px;
