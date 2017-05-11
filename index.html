@@ -14,21 +14,25 @@
                 Batman vs. Joker</p>
         </div>
     </header>
-    <section class="choose" id="choose-players">
+    <section class="choose" id="choose-players" hidden>
         <div class="col-xs-12 text-center">
             <h3>Why so serious?</h3>
-            <button class='btn btn-default' id="one-player">One Player</button>
-            <button class='btn btn-default' id="two-players">Two Players</button>
+            <button class='btn btn-default choose-button' id="one-player">One Player</button>
+            <button class='btn btn-default choose-button' id="two-players">Two Players</button>
         </div>
     </section>
     <section class="choose" id="choose-token" hidden>
         <div class="col-xs-12 text-center">
             <h3>Gotham needs you.</h3>
-            <button class='btn btn-default' id="batman-token">Play as Batman</button>
-            <button class='btn btn-default' id="joker-token">Play as Joker</button>
+            <button class="btn btn-default choose-button" id="batman-token">Play as Batman</button>
+            <button class="btn btn-default choose-button" id="joker-token">Play as Joker</button>
         </div>
     </section>
     <section id="board">
+        <div class="col-xs-12 text-center">
+            <h5 class="turn" id="joker-turn">Joker's<br/>Turn</h5>
+            <h5 class="turn" id="batman-turn">Batman's<br/>Turn</h5>
+        </div>
         <div class="col-xs-12 text-center" id="background">
             <table >
                 <tr id="top">
@@ -48,7 +52,16 @@
                 </tr>
             </table>
         </div>
+        <div class="col-xs-12 reset text-center">
+            <button class="btn btn-primary" id="reset-game">Reset Game</button>
+            <button class="btn btn-primary" id="reset-all">Start Over</button>
+        </div>
     </section>
+    <footer>
+        <div class="col-xs-12 text-center">
+            <h5>Brought to you by another vigilante<br /><a href="https://github.com/lbuthman/">Luke Buthman</a></h5>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
