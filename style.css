@@ -11,6 +11,20 @@
 #0D252F - Dark Gunmetal <batman>
 */
 
+* {
+    margin: 0;
+}
+
+html body {
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    margin: 0 auto 180px;
+}
+
 body {
     background: url(http://wallpapercave.com/wp/Kuq1ktQ.png
     ) no-repeat center center fixed;
@@ -97,9 +111,14 @@ td {
 footer {
     background: #008DD5;
     color: #FFFFFF;
-    margin-top: 18px;
+    max-width: 500px;
+    margin: auto;
     border-radius: 4px;
     padding: 8px 8px 2px 8px;
+}
+
+footer #push {
+    height: -180px;
 }
 
 a {
