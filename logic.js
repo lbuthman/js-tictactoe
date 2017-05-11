@@ -9,24 +9,65 @@ var BOARD = {
     6: "empty",
     7: "empty",
     8: "empty",
-    9: "empty",
-}
+    9: "empty"
+};
 
+//One of two: one-player, two-players
+var gameMode = "";
+var showSpeed = 500;
+var hideSpeed = 1000;
+
+//One of two: Batman - X, Jokeer - O
+var playerToken = "";
+
+/*Start game with Player selection, hiding other elements*/
 $(document).ready(function() {
-    $("#board").hide();
-
+    $("#choose-token").hide(0);
+    $("#board").hide(0);
 });
 
-function drawBoard() {
-    $("#board").show(1000);
-}
+/*Choose number of players and transition to token screen*/
+$(".mode").click(function() {
+    var mode = this.id;
+    switch(mode) {
+        case "one-player":
+            gameMode = mode;
+            break;
+        case "two-players":
+            gameMode = mode;
+            break;
+        default:
+            gameMode = "one-player";
+    }
+    $("#choose-token").show(showSpeed);
+    $("#choose-players").hide(hideSpeed);
+});
 
-function chooseNumPlayers() {
+/*Choose player token and transition to game board*/
+$(".token").click(function() {
+    var token = this.id;
 
-}
+    switch (token) {
+        case "batman-token":
+            playerToken = "X";
+            break;
+        case "joker-token":
+            playerToken = "O";
+            break;
+        default:
+            playerToken = "X";
+    }
+
+    $("#board").show(showSpeed);
+    $("#choose-token").hide(hideSpeed);
+});
+
+/*Handle reset buttons*/
+
+
 
 $("#top-left").click(function() {
-    $("#top-left").html("<img class='img-thumbnail' src='" + X + "' alt='batman' height='90' width='100'>")
+    $("#top-left").html("<img class='img-thumbnail' src='" + X + "' alt='batman' height='90' width='100'>");
     BOARD[1] = "full";
     alert(BOARD[1]);
 });
