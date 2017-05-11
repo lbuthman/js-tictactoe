@@ -7,12 +7,11 @@ body {
 
 #title {
     font-size: 46px;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 #description {
     font-size: 20px;
-    margin-top: -5%;
 }
 
 .choose {
@@ -20,8 +19,12 @@ body {
     max-width: 400px;
     margin: auto;
     border-radius: 8px;
-    padding: 10px 10px 20px 10px;
-    margin-top: 10%;
+    padding: 20px 10px 25px 10px;
+    margin-top: 8%;
+}
+
+.choose-button {
+    margin-top: 3%;
 }
 
 #background {
