@@ -1,0 +1,6 @@
+Project on hold as of 5/18/17.
+
+Reprioritized due to opportunity with NTD. The current focus is learning Java deeply and learning the
+required Java Stack.
+
+May or may not revisit at a later time.
