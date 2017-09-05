@@ -1,71 +1,91 @@
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Tic Tac Toe</title>
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-</head>
-<body>
-<div class="container">
-    <div id="wrapper">
+  </head>
+  
+  <body>
+    <div class="container">
+      <div id="wrapper">
+        
         <header>
-            <div class="col-xs-12 text-center">
-                <p id="title">
-                    Tic Tac Toe</p>
-                <p id="description">
-                    Batman vs. Joker</p>
-            </div>
+          <div class="col-xs-12 text-center">
+            <p id="title">Tic Tac Toe</p>
+            <p id="description">Batman vs. Joker</p>
+          </div>
         </header>
+        
         <section class="choose" id="choose-players">
-            <div class="col-xs-12 text-center">
-                <h3>Why so serious?</h3>
-                <button class='btn btn-default mode choose-button' id="one-player">One Player</button>
-                <button class='btn btn-default mode choose-button' id="two-players">Two Players</button>
-            </div>
+          <div class="col-xs-12 text-center">
+            <h3>Why so serious?</h3>
+            <button class='btn btn-default mode choose-button' id="one-player">
+              One Player</button>
+            <button class='btn btn-default mode choose-button' id="two-players">
+              Two Players</button>
+          </div>
         </section>
+        
         <section class="choose" id="choose-token">
-            <div class="col-xs-12 text-center">
-                <h3>Gotham needs you.</h3>
-                <button class="btn btn-default token choose-button" id="batman-token">Play as Batman</button>
-                <button class="btn btn-default token choose-button" id="joker-token">Play as Joker</button>
-            </div>
+          <div class="col-xs-12 text-center">
+            <h3>Gotham needs you.</h3>
+            <button class="btn btn-default token choose-button" id="batman-token">
+              Play as Batman</button>
+            <button class="btn btn-default token choose-button" id="joker-token">
+              Play as Joker</button>
+          </div>
         </section>
+        
+        <section id="turn">
+          <div class="col-xs-12 text-center">
+            <h5 class="turn" id="joker-turn">Joker's<br/>Turn</h5>
+            <h5 class="turn" id="blank-space"></h5>
+            <h5 class="turn" id="batman-turn">Batman's<br/>Turn</h5>
+          </div>
+        </section>
+        
         <section id="board">
-            <div class="col-xs-12 text-center">
-                <h5 class="turn" id="joker-turn">Joker's<br/>Turn</h5>
-                <h5 class="turn" id="batman-turn">Batman's<br/>Turn</h5>
-            </div>
-            <div class="col-xs-12 text-center" id="background">
-                <table >
-                    <tr id="top">
-                        <td class="right bottom" id="top-left"></td>
-                        <td class="right bottom" id="top-center"></td>
-                        <td class="bottom" id="top-right"></td>
-                    </tr>
-                    <tr id="middle">
-                        <td class="right bottom" id="middle-left"></td>
-                        <td class="right bottom" id="middle-center"></td>
-                        <td class="bottom" id="middle-right"></td>
-                    </tr>
-                    <tr id="bottom">
-                        <td class="right" id="bottom-left"></td>
-                        <td class="right" id="bottom-center"></td>
-                        <td id="bottom-right"></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-xs-12 reset text-center">
-                <button class="btn btn-primary" id="reset-game">Reset Game</button>
-                <button class="btn btn-primary" id="reset-all">Start Over</button>
-            </div>
+          <div class="col-xs-12 text-center" id="background">
+            <table >
+              <tr id="top">
+                <td class="square right bottom" id="top-left"></td>
+                <td class="square right bottom" id="top-center"></td>
+                <td class="square bottom" id="top-right"></td>
+              </tr>
+              <tr id="middle">
+                <td class="square right bottom" id="middle-left"></td>
+                <td class="square right bottom" id="middle-center"></td>
+                <td class="square bottom" id="middle-right"></td>
+              </tr>
+              <tr id="bottom">
+                <td class="square right" id="bottom-left"></td>
+                <td class="square right" id="bottom-center"></td>
+                <td class="square" id="bottom-right"></td>
+              </tr>
+            </table>
+          </div>
+          
+          <section class="col-xs-6 text-center">
+            <div class="col-xs-3 reset">
+              <button class="btn btn-primary reset" id="reset-game">
+                Reset Game</button>
+              <button class="btn btn-primary reset" id="reset-all">
+                Start Over</button>
+          </section>
+          
         </section>
-        <div id="push">
-        </div>
-    </div>
-    <footer>
+        
+        <div id="push"></div>
+        
+      </div>
+      
+      <footer>
         <div class="col-xs-8 text-center">
-            <h5>Brought to you by another vigilante<br /><a href="https://github.com/lbuthman/">Luke Buthman</a></h5>
+          <h5>Brought to you by another vigilante
+          <br><a href="https://github.com/lbuthman/">Luke Buthman</a></>
         </div>
-    </footer>
-</div>
-</body>
+      </footer>
+    </div>
+  </body>
 </html>
+  
