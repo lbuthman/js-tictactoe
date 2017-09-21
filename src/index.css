@@ -19,6 +19,10 @@ body {
   font-family: 'Audiowide', cursive;
 }
 
+header {
+  height: 110px;
+}
+
 .title {
   font-size: 46px;
   margin-top: 2%;
@@ -38,10 +42,67 @@ body {
   margin: auto;
   border-radius: 8px;
   padding: 20px 10px 25px 10px;
-  margin-top: 2%;
+  margin-top: 4%;
 }
 
 .choose-button {
   margin: 10px 10px 10px 10px;
 
+}
+
+.background {
+  background: black;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.game-status{
+  display: inline-block;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 4px;
+  width: 100px;
+  max-width: 120px;
+  height: 50px;
+}
+
+.batman-wins {
+  background: #008DD5;
+  color: white;
+}
+
+.joker-wins {
+  background: #541388;
+  color: #A07178;
+}
+
+.turn {
+  background: #0D252F;
+  color: white;
+}
+
+td {
+  height: 130px;
+  width: 230px;
+}
+
+.bottom {
+  border-bottom: 5px solid #008DD5;
+}
+
+.right {
+  border-right: 5px solid #008DD5;
+}
+
+.btn-primary {
+  background-color: #81938B;
+  border-color: #81938B;
+  color: #0D252F;
+  margin-top: 5px;
+}
+
+.reset {
+  width: 120px;
+  margin: 10px 10px 10px 10px;
 }

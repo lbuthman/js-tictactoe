@@ -21,10 +21,12 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+            <state relative-caret-position="292">
+              <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
+                <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
                 <element signature="n#!!block;n#Header#0" expanded="false" />
                 <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
                 <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
@@ -32,6 +34,8 @@
                 <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
                 <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
                 <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
+                <element signature="n#!!block;n#renderBoard#0;n#Game#0" expanded="false" />
+                <element signature="n#!!block;n#renderStatus#0;n#Game#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -50,14 +54,29 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="527">
+              <caret line="106" column="30" lean-forward="false" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
+              <folding>
+                <element signature="e#2#18#0" expanded="false" />
+                <element signature="e#30#49#0" expanded="false" />
+                <element signature="e#60#134#0" expanded="false" />
+                <element signature="e#141#300#0" expanded="false" />
+                <element signature="e#309#329#0" expanded="false" />
+                <element signature="e#338#398#0" expanded="false" />
+                <element signature="e#413#435#0" expanded="false" />
+                <element signature="e#445#638#0" expanded="false" />
+                <element signature="e#655#690#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>class</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -171,12 +190,12 @@
       <updated>1505927839124</updated>
       <workItem from="1505927840340" duration="662000" />
       <workItem from="1505946242331" duration="3615000" />
-      <workItem from="1505996490778" duration="6388000" />
+      <workItem from="1505996490778" duration="10260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10665000" />
+    <option name="totallyTimeSpent" value="14537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="163" y="23" width="1112" height="733" extended-state="0" />
@@ -211,7 +230,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -221,6 +242,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
+            <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
             <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
@@ -228,6 +251,8 @@
             <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderBoard#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderStatus#0;n#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -244,7 +269,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#2#18#0" expanded="false" />
+            <element signature="e#30#49#0" expanded="false" />
+            <element signature="e#60#134#0" expanded="false" />
+            <element signature="e#141#300#0" expanded="false" />
+            <element signature="e#309#329#0" expanded="false" />
+            <element signature="e#338#398#0" expanded="false" />
+            <element signature="e#413#435#0" expanded="false" />
+            <element signature="e#445#638#0" expanded="false" />
+            <element signature="e#655#690#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -254,6 +289,8 @@
           <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
+            <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
             <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
@@ -261,6 +298,8 @@
             <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderBoard#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderStatus#0;n#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -311,10 +350,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+        <state relative-caret-position="292">
+          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
+            <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
             <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
@@ -322,15 +363,27 @@
             <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderBoard#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderStatus#0;n#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="527">
+          <caret line="106" column="30" lean-forward="false" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
+          <folding>
+            <element signature="e#2#18#0" expanded="false" />
+            <element signature="e#30#49#0" expanded="false" />
+            <element signature="e#60#134#0" expanded="false" />
+            <element signature="e#141#300#0" expanded="false" />
+            <element signature="e#309#329#0" expanded="false" />
+            <element signature="e#338#398#0" expanded="false" />
+            <element signature="e#413#435#0" expanded="false" />
+            <element signature="e#445#638#0" expanded="false" />
+            <element signature="e#655#690#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
