@@ -18,13 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="133" column="69" lean-forward="false" selection-start-line="133" selection-start-column="69" selection-end-line="133" selection-end-column="69" />
+            <state relative-caret-position="315">
+              <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#Header#0" expanded="false" />
+                <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
+                <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
+                <element signature="n#!!block;n#renderModeDialog#0;n#Game#0" expanded="false" />
+                <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
+                <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
+                <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -40,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="42" column="1" lean-forward="false" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+            <state relative-caret-position="434">
+              <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -60,8 +67,8 @@
       <list>
         <option value="$PROJECT_DIR$/public/manifest.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
       </list>
     </option>
   </component>
@@ -164,12 +171,12 @@
       <updated>1505927839124</updated>
       <workItem from="1505927840340" duration="662000" />
       <workItem from="1505946242331" duration="3615000" />
-      <workItem from="1505996490778" duration="5083000" />
+      <workItem from="1505996490778" duration="6388000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9360000" />
+    <option name="totallyTimeSpent" value="10665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="163" y="23" width="1112" height="733" extended-state="0" />
@@ -214,6 +221,13 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#Header#0" expanded="false" />
+            <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderModeDialog#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -240,6 +254,13 @@
           <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#Header#0" expanded="false" />
+            <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderModeDialog#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -288,21 +309,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="42" column="1" lean-forward="false" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="315">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#Header#0" expanded="false" />
+            <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderModeDialog#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="133" column="69" lean-forward="false" selection-start-line="133" selection-start-column="69" selection-end-line="133" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="434">
+          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

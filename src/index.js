@@ -87,6 +87,20 @@ function ModeDialog(props) {
   );
 }
 
+function TokenDialog(props) {
+  return (
+    <section className="choose">
+      <div className="col-xs-12 text-center">
+        <h3>Gotham needs you.</h3>
+        <button className="btn btn-default token choose-button" onClick={props.onClickTokenBatman}>
+          Play as Batman</button>
+        <button className="btn btn-default token choose-button" onClick={props.onClickTokenJoker}>
+          Play as Joker</button>
+      </div>
+    </section>
+  );
+}
+
 function Header() {
   return (
     <header>
@@ -104,18 +118,22 @@ class Game extends React.Component {
     this.state = {
       mode: "singlePlayer",
       showModeDialog: true,
+      token: "",
+      showTokenDialog: false,
     }
   }
   handleSingleMode() {
     this.setState({
       mode: "singlePlayer",
       showModeDialog: false,
+      showTokenDialog: true,
     });
   }
   handleDualMode() {
     this.setState({
       mode: "dualPlayer",
       showModeDialog: false,
+      showTokenDialog: true,
     });
   }
   renderModeDialog() {
@@ -126,12 +144,33 @@ class Game extends React.Component {
       />
     );
   }
+  handleTokenBatman() {
+    this.setState({
+      token: "Batman",
+      showTokenDialog: false,
+    });
+  }
+  handleTokenJoker() {
+    this.setState({
+      token: "Joker",
+      showTokenDialog: false,
+    });
+  }
+  renderTokenDialog() {
+    return (
+      <TokenDialog
+        onClickTokenBatman={() => this.handleTokenBatman()}
+        onClickTokenJoker={() => this.handleTokenJoker()}
+      />
+    )
+  }
   render() {
     return (
       <div>
         <Header />
         <Board />
         { this.state.showModeDialog ? this.renderModeDialog() : null }
+        { this.state.showTokenDialog ? this.renderTokenDialog() : null }
       </div>
     );
   }
