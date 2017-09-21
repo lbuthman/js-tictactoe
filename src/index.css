@@ -18,3 +18,13 @@ body {
   background-size: cover;
   font-family: 'Audiowide', cursive;
 }
+
+.title {
+  font-size: 46px;
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+
+.description {
+  font-size: 20px;
+}

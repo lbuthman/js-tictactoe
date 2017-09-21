@@ -73,17 +73,23 @@ class Board extends React.Component {
   }
 }
 
+function Header() {
+  return (
+    <header>
+      <div className="col-xs-12 text-center">
+        <p className="title">Tic Tac Toe</p>
+        <p className="description">Batman vs. Joker</p>
+      </div>
+    </header>
+  );
+}
+
 class Game extends React.Component {
   render() {
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board />
-        </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
+      <div>
+        <Header />
+        <Board />
       </div>
     );
   }
