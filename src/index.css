@@ -28,3 +28,16 @@ body {
 .description {
   font-size: 20px;
 }
+
+.choose {
+  background: #FCDEBE;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 8px;
+  padding: 20px 10px 25px 10px;
+  margin-top: 8%;
+}
+
+.choose-button {
+  margin-top: 3%;
+}

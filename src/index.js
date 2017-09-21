@@ -73,6 +73,20 @@ class Board extends React.Component {
   }
 }
 
+function ModeDialog(props) {
+  return (
+    <section className="choose">
+      <div className="col-xs-12 text-center">
+        <h3>Why so serious?</h3>
+        <button className='btn btn-default mode choose-button' onClick={props.onClickSingleMode}>
+          One Player</button>
+        <button className='btn btn-default mode choose-button' onClick={props.onClickDualMode}>
+          Two Players</button>
+      </div>
+    </section>
+  );
+}
+
 function Header() {
   return (
     <header>
@@ -85,11 +99,39 @@ function Header() {
 }
 
 class Game extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      mode: "singlePlayer",
+      showModeDialog: true,
+    }
+  }
+  handleSingleMode() {
+    this.setState({
+      mode: "singlePlayer",
+      showModeDialog: false,
+    });
+  }
+  handleDualMode() {
+    this.setState({
+      mode: "dualPlayer",
+      showModeDialog: false,
+    });
+  }
+  renderModeDialog() {
+    return (
+      <ModeDialog
+        onClickSingleMode={() => this.handleSingleMode()}
+        onClickDualMode={() => this.handleDualMode()}
+      />
+    );
+  }
   render() {
     return (
       <div>
         <Header />
         <Board />
+        { this.state.showModeDialog ? this.renderModeDialog() : null }
       </div>
     );
   }
