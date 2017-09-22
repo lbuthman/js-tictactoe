@@ -43,7 +43,6 @@ class Board extends React.Component {
       nextTurn: "Batman's Turn",
       isBatmansTurn: true,
       gameOver: false,
-      resetGame: props.resetGame,
     };
   }
 
@@ -87,10 +86,16 @@ class Board extends React.Component {
   }
 
   handlePlayAgain() {
-    console.log("play again");
+    this.setState({
+      squares: Array(9).fill(null),
+      isBatmansTurn: !this.state.isBatmansTurn,
+      nextTurn: this.state.isBatmansTurn ? "Joker's Turn" : "Batman's Turn",
+      gameOver: false,
+    })
   }
   handleStartOver() {
-    console.log("start over");
+    this.handlePlayAgain();
+    console.log("go back to first window somehow");
   }
 
   renderSquare(i) {
@@ -262,9 +267,7 @@ class WindowSequence extends React.Component {
 
   renderBoard() {
     return (
-      <Board
-        resetGame={this.state.resetGame}
-      />
+      <Board/>
     );
   }
 
