@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35823f8a-8e57-4ed5-b66b-0450d6472bf1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,12 +20,13 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="92" column="45" lean-forward="true" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
+            <state relative-caret-position="152">
+              <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#Status#0" expanded="false" />
                 <element signature="n#!!block;n#Controls#0" expanded="false" />
+                <element signature="n#!!block;n#renderSquare#0;n#Board#0" expanded="false" />
                 <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
                 <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
                 <element signature="n#!!block;n#Header#0" expanded="false" />
@@ -37,6 +37,7 @@
                 <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
                 <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
                 <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
+                <element signature="n#!!block;n#renderControls#0;n#WindowSequence#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -90,8 +91,8 @@
       <list>
         <option value="$PROJECT_DIR$/public/manifest.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -194,12 +195,12 @@
       <updated>1505927839124</updated>
       <workItem from="1505927840340" duration="662000" />
       <workItem from="1505946242331" duration="3615000" />
-      <workItem from="1505996490778" duration="20780000" />
+      <workItem from="1505996490778" duration="24347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25057000" />
+    <option name="totallyTimeSpent" value="28624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="163" y="23" width="1112" height="733" extended-state="0" />
@@ -248,6 +249,7 @@
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#Status#0" expanded="false" />
             <element signature="n#!!block;n#Controls#0" expanded="false" />
+            <element signature="n#!!block;n#renderSquare#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
             <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
@@ -258,6 +260,7 @@
             <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderControls#0;n#WindowSequence#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -296,6 +299,7 @@
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#Status#0" expanded="false" />
             <element signature="n#!!block;n#Controls#0" expanded="false" />
+            <element signature="n#!!block;n#renderSquare#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
             <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
@@ -306,6 +310,7 @@
             <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderControls#0;n#WindowSequence#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -374,12 +379,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="92" column="45" lean-forward="true" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
+        <state relative-caret-position="152">
+          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#Status#0" expanded="false" />
             <element signature="n#!!block;n#Controls#0" expanded="false" />
+            <element signature="n#!!block;n#renderSquare#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
             <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
@@ -390,6 +396,7 @@
             <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderControls#0;n#WindowSequence#0" expanded="false" />
           </folding>
         </state>
       </provider>

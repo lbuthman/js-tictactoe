@@ -36,27 +36,51 @@ class Board extends React.Component {
     super();
     this.state = {
       squares: Array(9).fill(null),
-      xIsNext: true,
-      currentToken: "",
       batmanToken: "https://cdn4.iconfinder.com/data/icons/heros/100/Super_Hero_1-512.png",
       jokerToken: "https://maxcdn.icons8.com/Color/PNG/512/Cinema/joker_suicide_squad-512.png",
       batmanWins: 0,
       jokerWins: 0,
-      squares: Array(9).fill(null),
       nextTurn: "Batman's Turn",
       isBatmansTurn: true,
+      gameOver: false,
     };
+  }
+
+  handleWinner(winner) {
+    if (this.state.gameOver) {
+      return;
+    }
+
+    let batmanWins = this.state.batmanWins;
+    let jokerWins = this.state.jokerWins;
+
+    if (winner === "Batman") {
+      batmanWins += 1;
+    }
+
+    if (winner === "Joker") {
+      jokerWins += 1;
+    }
+
+    this.setState({
+      batmanWins: batmanWins,
+      jokerWins: jokerWins,
+      gameOver: true,
+    })
   }
 
   handleClick(i) {
     const squares = this.state.squares.slice();
-    if (calculateWinner(squares) || squares[i]) {
+
+    if (squares[i] || this.state.gameOver) {
       return;
     }
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
+
+    squares[i] = this.state.isBatmansTurn ? this.state.batmanToken : this.state.jokerToken;
     this.setState({
       squares: squares,
-      xIsNext: !this.state.xIsNext,
+      isBatmansTurn: !this.state.isBatmansTurn,
+      nextTurn: this.state.isBatmansTurn ? "Joker's Turn" : "Batman's Turn",
     });
 
   }
@@ -80,13 +104,11 @@ class Board extends React.Component {
     );
   }
 
-  render(props) {
+  render() {
     const winner = calculateWinner(this.state.squares);
-    let status;
+
     if (winner) {
-      status = 'Winner ' + winner;
-    } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+      this.handleWinner(winner);
     }
 
     return (
@@ -278,7 +300,11 @@ function calculateWinner(squares) {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
+      if (squares[a].includes("Super_Hero_1")) {
+        return "Batman";
+      } else {
+        return "Joker";
+      }
     }
   }
   return null;
