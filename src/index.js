@@ -46,6 +46,22 @@ class Board extends React.Component {
     };
   }
 
+  handleClick(i) {
+    const squares = this.state.squares.slice();
+
+    if (squares[i] || this.state.gameOver) {
+      return;
+    }
+
+    squares[i] = this.state.isBatmansTurn ? this.state.batmanToken : this.state.jokerToken;
+    this.setState({
+      squares: squares,
+      isBatmansTurn: !this.state.isBatmansTurn,
+      nextTurn: this.state.isBatmansTurn ? "Joker's Turn" : "Batman's Turn",
+    });
+
+  }
+
   handleWinner(winner) {
     if (this.state.gameOver) {
       return;
@@ -68,21 +84,15 @@ class Board extends React.Component {
       gameOver: true,
     })
   }
+  checkWinner() {
+    const winner = calculateWinner(this.state.squares.slice());
 
-  handleClick(i) {
-    const squares = this.state.squares.slice();
-
-    if (squares[i] || this.state.gameOver) {
-      return;
+    if (winner) {
+      this.handleWinner(winner);
     }
-
-    squares[i] = this.state.isBatmansTurn ? this.state.batmanToken : this.state.jokerToken;
-    this.setState({
-      squares: squares,
-      isBatmansTurn: !this.state.isBatmansTurn,
-      nextTurn: this.state.isBatmansTurn ? "Joker's Turn" : "Batman's Turn",
-    });
-
+  }
+  componentDidUpdate() {
+    this.checkWinner();
   }
 
   handlePlayAgain() {
@@ -95,6 +105,7 @@ class Board extends React.Component {
   }
   handleStartOver() {
     this.handlePlayAgain();
+    console.log("clear wins for each player");
     console.log("go back to first window somehow");
   }
 
@@ -118,15 +129,6 @@ class Board extends React.Component {
   }
 
   render() {
-    const winner = calculateWinner(this.state.squares);
-
-    if (winner) {
-      this.handleWinner(winner);
-    }
-
-    if (this.state.resetGame) {
-      console.log("hi");
-    }
 
     return (
       <div className="col-xs-12 text-center">
@@ -209,7 +211,6 @@ class WindowSequence extends React.Component {
       showStatus: false,
       mode: "singlePlayer",
       token: "",
-      resetGame: false,
     }
   }
 

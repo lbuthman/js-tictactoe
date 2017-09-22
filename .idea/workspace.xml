@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35823f8a-8e57-4ed5-b66b-0450d6472bf1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,16 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="90" column="47" lean-forward="false" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
+            <state relative-caret-position="120">
+              <caret line="92" column="3" lean-forward="false" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#Status#0" expanded="false" />
                 <element signature="n#!!block;n#Controls#0" expanded="false" />
+                <element signature="n#!!block;n#handleClick#0;n#Board#0" expanded="false" />
                 <element signature="n#!!block;n#handleWinner#0;n#Board#0" expanded="false" />
+                <element signature="n#!!block;n#checkWinner#0;n#Board#0" expanded="false" />
+                <element signature="n#!!block;n#componentDidUpdate#0;n#Board#0" expanded="false" />
+                <element signature="n#!!block;n#handlePlayAgain#0;n#Board#0" expanded="false" />
                 <element signature="n#!!block;n#renderSquare#0;n#Board#0" expanded="false" />
                 <element signature="n#!!block;n#renderStatus#0;n#Board#0" expanded="false" />
                 <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
@@ -56,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="268">
@@ -94,8 +96,8 @@
       <list>
         <option value="$PROJECT_DIR$/public/manifest.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -198,12 +200,12 @@
       <updated>1505927839124</updated>
       <workItem from="1505927840340" duration="662000" />
       <workItem from="1505946242331" duration="3615000" />
-      <workItem from="1505996490778" duration="27545000" />
+      <workItem from="1505996490778" duration="28923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31822000" />
+    <option name="totallyTimeSpent" value="33200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="163" y="23" width="1112" height="733" extended-state="0" />
@@ -252,7 +254,11 @@
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#Status#0" expanded="false" />
             <element signature="n#!!block;n#Controls#0" expanded="false" />
+            <element signature="n#!!block;n#handleClick#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#handleWinner#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#checkWinner#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#componentDidUpdate#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#handlePlayAgain#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#renderSquare#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#renderStatus#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
@@ -303,7 +309,11 @@
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#Status#0" expanded="false" />
             <element signature="n#!!block;n#Controls#0" expanded="false" />
+            <element signature="n#!!block;n#handleClick#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#handleWinner#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#checkWinner#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#componentDidUpdate#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#handlePlayAgain#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#renderSquare#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#renderStatus#0;n#Board#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
@@ -364,31 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="90" column="47" lean-forward="false" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#Status#0" expanded="false" />
-            <element signature="n#!!block;n#Controls#0" expanded="false" />
-            <element signature="n#!!block;n#handleWinner#0;n#Board#0" expanded="false" />
-            <element signature="n#!!block;n#renderSquare#0;n#Board#0" expanded="false" />
-            <element signature="n#!!block;n#renderStatus#0;n#Board#0" expanded="false" />
-            <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
-            <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
-            <element signature="n#!!block;n#Header#0" expanded="false" />
-            <element signature="n#!!block;n#handleSingleMode#0;n#WindowSequence#0" expanded="false" />
-            <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
-            <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
-            <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
-            <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
-            <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
-            <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -403,6 +388,35 @@
             <element signature="e#413#435#0" expanded="false" />
             <element signature="e#445#638#0" expanded="false" />
             <element signature="e#655#690#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="92" column="3" lean-forward="false" selection-start-line="92" selection-start-column="3" selection-end-line="92" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#Status#0" expanded="false" />
+            <element signature="n#!!block;n#Controls#0" expanded="false" />
+            <element signature="n#!!block;n#handleClick#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#handleWinner#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#checkWinner#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#componentDidUpdate#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#handlePlayAgain#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#renderSquare#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#renderStatus#0;n#Board#0" expanded="false" />
+            <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
+            <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
+            <element signature="n#!!block;n#Header#0" expanded="false" />
+            <element signature="n#!!block;n#handleSingleMode#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
           </folding>
         </state>
       </provider>
