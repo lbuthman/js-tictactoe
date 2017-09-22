@@ -32,8 +32,8 @@ function Controls(props) {
 }
 
 class Board extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       squares: Array(9).fill(null),
       batmanToken: "https://cdn4.iconfinder.com/data/icons/heros/100/Super_Hero_1-512.png",
@@ -43,6 +43,7 @@ class Board extends React.Component {
       nextTurn: "Batman's Turn",
       isBatmansTurn: true,
       gameOver: false,
+      resetGame: props.resetGame,
     };
   }
 
@@ -85,6 +86,13 @@ class Board extends React.Component {
 
   }
 
+  handlePlayAgain() {
+    console.log("play again");
+  }
+  handleStartOver() {
+    console.log("start over");
+  }
+
   renderSquare(i) {
     return (
       <Square
@@ -111,10 +119,15 @@ class Board extends React.Component {
       this.handleWinner(winner);
     }
 
+    if (this.state.resetGame) {
+      console.log("hi");
+    }
+
     return (
       <div className="col-xs-12 text-center">
         {this.renderStatus()}
         <table className="background">
+          <tbody>
           <tr id="top">
             <td className="square right bottom">{this.renderSquare(0)}</td>
             <td className="square right bottom">{this.renderSquare(1)}</td>
@@ -130,7 +143,13 @@ class Board extends React.Component {
             <td className="square right">{this.renderSquare(7)}</td>
             <td className="square">{this.renderSquare(8)}</td>
           </tr>
+          </tbody>
         </table>
+
+        <Controls
+          onClickPlayAgain={() => this.handlePlayAgain()}
+          onClickStartOver={() => this.handleStartOver()}
+        />
       </div>
     );
   }
@@ -183,9 +202,9 @@ class WindowSequence extends React.Component {
       showTokenDialog: false,
       showBoard: false,
       showStatus: false,
-      showControls: false,
       mode: "singlePlayer",
       token: "",
+      resetGame: false,
     }
   }
 
@@ -223,13 +242,6 @@ class WindowSequence extends React.Component {
     });
   }
 
-  handlePlayAgain() {
-    // TODO
-  }
-  handleStartOver() {
-    //  TODO
-  }
-
   renderTokenDialog() {
     return (
       <TokenDialog
@@ -250,19 +262,11 @@ class WindowSequence extends React.Component {
 
   renderBoard() {
     return (
-      <Board/>
-    );
-  }
-
-  renderControls() {
-    return (
-      <Controls
-        onClickPlayAgain={() => this.handlePlayAgain()}
-        onClickStartOver={() => this.handleStartOver()}
+      <Board
+        resetGame={this.state.resetGame}
       />
     );
   }
-
 
   render() {
     return (
@@ -271,13 +275,10 @@ class WindowSequence extends React.Component {
         { this.state.showModeDialog ? this.renderModeDialog() : null }
         { this.state.showTokenDialog ? this.renderTokenDialog() : null }
         { this.state.showBoard ? this.renderBoard() : null }
-        { this.state.showControls ? this.renderControls() : null }
       </div>
     );
   }
 }
-
-
 
 // ========================================
 
