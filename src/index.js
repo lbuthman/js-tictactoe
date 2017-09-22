@@ -31,7 +31,7 @@ function Controls(props) {
   );
 }
 
-class Board extends React.Component {
+class GameBoard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -105,8 +105,7 @@ class Board extends React.Component {
   }
   handleStartOver() {
     this.handlePlayAgain();
-    console.log("clear wins for each player");
-    console.log("go back to first window somehow");
+    this.props.startOver();
   }
 
   renderSquare(i) {
@@ -248,6 +247,13 @@ class WindowSequence extends React.Component {
     });
   }
 
+  handleCallback = () => {
+    this.setState({
+      showBoard: false,
+      showModeDialog: true,
+    });
+  }
+
   renderTokenDialog() {
     return (
       <TokenDialog
@@ -268,7 +274,9 @@ class WindowSequence extends React.Component {
 
   renderBoard() {
     return (
-      <Board/>
+      <GameBoard
+        startOver={this.handleCallback}
+      />
     );
   }
 
