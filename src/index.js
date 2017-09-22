@@ -5,7 +5,7 @@ import './index.css';
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
-      {props.value}
+      <img className="img-thumbnail" src={props.value} alt="" height="90" width="100"/>
     </button>
   );
 }
@@ -15,17 +15,17 @@ function Status(props) {
     <section className="col-xs-12 text-center">
       <h5 className="batman-wins game-status">Batman's Wins: {props.batmanWins} </h5>
       <h5 className="joker-wins game-status">Joker's Wins: {props.jokerWins} </h5>
-      <h5 className="turn game-status">Batman's<br/>Turn</h5>
+      <h5 className="turn game-status">{props.nextTurn}</h5>
     </section>
   );
 }
 
 function Controls(props) {
   return (
-    <section className="col-xs-6 text-center">
-      <button className="btn btn-primary reset">
-        Reset Game</button>
-      <button className="btn btn-primary reset">
+    <section className="col-xs-12 text-center">
+      <button className="btn btn-primary reset" onClick={props.onClickPlayAgain}>
+        Play Again</button>
+      <button className="btn btn-primary reset" onClick={props.onClickStartOver}>
         Start Over</button>
     </section>
   );
@@ -37,6 +37,14 @@ class Board extends React.Component {
     this.state = {
       squares: Array(9).fill(null),
       xIsNext: true,
+      currentToken: "",
+      batmanToken: "https://cdn4.iconfinder.com/data/icons/heros/100/Super_Hero_1-512.png",
+      jokerToken: "https://maxcdn.icons8.com/Color/PNG/512/Cinema/joker_suicide_squad-512.png",
+      batmanWins: 0,
+      jokerWins: 0,
+      squares: Array(9).fill(null),
+      nextTurn: "Batman's Turn",
+      isBatmansTurn: true,
     };
   }
 
@@ -62,6 +70,16 @@ class Board extends React.Component {
     );
   }
 
+  renderStatus() {
+    return (
+      <Status
+        batmanWins={this.state.batmanWins}
+        jokerWins={this.state.jokerWins}
+        nextTurn={this.state.nextTurn}
+      />
+    );
+  }
+
   render(props) {
     const winner = calculateWinner(this.state.squares);
     let status;
@@ -72,26 +90,25 @@ class Board extends React.Component {
     }
 
     return (
-      <div>
-        <section className="col-xs-12 text-center background">
-            <table >
-              <tr id="top">
-                <td className="square right bottom">{this.renderSquare(0)}</td>
-                <td className="square right bottom">{this.renderSquare(1)}</td>
-                <td className="square bottom">{this.renderSquare(2)}</td>
-              </tr>
-              <tr id="middle">
-                <td className="square right bottom">{this.renderSquare(3)}</td>
-                <td className="square right bottom">{this.renderSquare(4)}</td>
-                <td className="square bottom">{this.renderSquare(5)}</td>
-              </tr>
-              <tr id="bottom">
-                <td className="square right">{this.renderSquare(6)}</td>
-                <td className="square right">{this.renderSquare(7)}</td>
-                <td className="square">{this.renderSquare(8)}</td>
-              </tr>
-            </table>
-        </section>
+      <div className="col-xs-12 text-center">
+        {this.renderStatus()}
+        <table className="background">
+          <tr id="top">
+            <td className="square right bottom">{this.renderSquare(0)}</td>
+            <td className="square right bottom">{this.renderSquare(1)}</td>
+            <td className="square bottom">{this.renderSquare(2)}</td>
+          </tr>
+          <tr id="middle">
+            <td className="square right bottom">{this.renderSquare(3)}</td>
+            <td className="square right bottom">{this.renderSquare(4)}</td>
+            <td className="square bottom">{this.renderSquare(5)}</td>
+          </tr>
+          <tr id="bottom">
+            <td className="square right">{this.renderSquare(6)}</td>
+            <td className="square right">{this.renderSquare(7)}</td>
+            <td className="square">{this.renderSquare(8)}</td>
+          </tr>
+        </table>
       </div>
     );
   }
@@ -136,21 +153,20 @@ function Header() {
   );
 }
 
-class Game extends React.Component {
+class WindowSequence extends React.Component {
   constructor() {
     super();
     this.state = {
-      mode: "singlePlayer",
       showModeDialog: true,
-      token: "",
       showTokenDialog: false,
       showBoard: false,
       showStatus: false,
       showControls: false,
-      batmanWins: 0,
-      jokerWins: 0,
+      mode: "singlePlayer",
+      token: "",
     }
   }
+
   handleSingleMode() {
     this.setState({
       mode: "singlePlayer",
@@ -165,14 +181,7 @@ class Game extends React.Component {
       showTokenDialog: true,
     });
   }
-  renderModeDialog() {
-    return (
-      <ModeDialog
-        onClickSingleMode={() => this.handleSingleMode()}
-        onClickDualMode={() => this.handleDualMode()}
-      />
-    );
-  }
+
   handleTokenBatman() {
     this.setState({
       token: "Batman",
@@ -191,6 +200,14 @@ class Game extends React.Component {
       showControls: true,
     });
   }
+
+  handlePlayAgain() {
+    // TODO
+  }
+  handleStartOver() {
+    //  TODO
+  }
+
   renderTokenDialog() {
     return (
       <TokenDialog
@@ -199,33 +216,38 @@ class Game extends React.Component {
       />
     )
   }
+
+  renderModeDialog() {
+    return (
+      <ModeDialog
+        onClickSingleMode={() => this.handleSingleMode()}
+        onClickDualMode={() => this.handleDualMode()}
+      />
+    );
+  }
+
   renderBoard() {
     return (
       <Board/>
     );
   }
-  renderStatus() {
-    return (
-      <Status
-        batmanWins={this.state.batmanWins}
-        jokerWins={this.state.jokerWins}
-      />
-    );
-  }
+
   renderControls() {
     return (
       <Controls
-
+        onClickPlayAgain={() => this.handlePlayAgain()}
+        onClickStartOver={() => this.handleStartOver()}
       />
     );
   }
+
+
   render() {
     return (
       <div>
         <Header />
         { this.state.showModeDialog ? this.renderModeDialog() : null }
         { this.state.showTokenDialog ? this.renderTokenDialog() : null }
-        { this.state.showStatus ? this.renderStatus() : null }
         { this.state.showBoard ? this.renderBoard() : null }
         { this.state.showControls ? this.renderControls() : null }
       </div>
@@ -238,7 +260,7 @@ class Game extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <Game />,
+  <WindowSequence />,
   document.getElementById('root')
 );
 

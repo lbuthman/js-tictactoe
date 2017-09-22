@@ -18,24 +18,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            <state relative-caret-position="235">
+              <caret line="92" column="45" lean-forward="true" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="n#!!block;n#Status#0" expanded="false" />
+                <element signature="n#!!block;n#Controls#0" expanded="false" />
                 <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
                 <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
                 <element signature="n#!!block;n#Header#0" expanded="false" />
-                <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
-                <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
-                <element signature="n#!!block;n#renderModeDialog#0;n#Game#0" expanded="false" />
-                <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
-                <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
-                <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
-                <element signature="n#!!block;n#renderBoard#0;n#Game#0" expanded="false" />
-                <element signature="n#!!block;n#renderStatus#0;n#Game#0" expanded="false" />
+                <element signature="n#!!block;n#handleSingleMode#0;n#WindowSequence#0" expanded="false" />
+                <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
+                <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
+                <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
+                <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
+                <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
+                <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -51,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="106" column="30" lean-forward="false" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
+            <state relative-caret-position="174">
+              <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="15" />
               <folding>
                 <element signature="e#2#18#0" expanded="false" />
                 <element signature="e#30#49#0" expanded="false" />
@@ -77,6 +78,9 @@
     <findStrings>
       <find>class</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -161,7 +165,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -190,12 +194,12 @@
       <updated>1505927839124</updated>
       <workItem from="1505927840340" duration="662000" />
       <workItem from="1505946242331" duration="3615000" />
-      <workItem from="1505996490778" duration="10260000" />
+      <workItem from="1505996490778" duration="20780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14537000" />
+    <option name="totallyTimeSpent" value="25057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="163" y="23" width="1112" height="733" extended-state="0" />
@@ -210,6 +214,7 @@
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17895684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -219,7 +224,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -231,7 +235,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -242,17 +246,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#Status#0" expanded="false" />
+            <element signature="n#!!block;n#Controls#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
             <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
-            <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderModeDialog#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderBoard#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderStatus#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleSingleMode#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -289,17 +294,18 @@
           <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#Status#0" expanded="false" />
+            <element signature="n#!!block;n#Controls#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
             <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
-            <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderModeDialog#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderBoard#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderStatus#0;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#handleSingleMode#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -348,31 +354,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
-            <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
-            <element signature="n#!!block;n#Header#0" expanded="false" />
-            <element signature="n#!!block;n#handleSingleMode#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#handleDualMode#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderModeDialog#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#handleTokenBatman#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#handleTokenJoker#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderTokenDialog#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderBoard#0;n#Game#0" expanded="false" />
-            <element signature="n#!!block;n#renderStatus#0;n#Game#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="106" column="30" lean-forward="false" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
+        <state relative-caret-position="174">
+          <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="15" />
           <folding>
             <element signature="e#2#18#0" expanded="false" />
             <element signature="e#30#49#0" expanded="false" />
@@ -387,5 +372,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="92" column="45" lean-forward="true" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#Status#0" expanded="false" />
+            <element signature="n#!!block;n#Controls#0" expanded="false" />
+            <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
+            <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
+            <element signature="n#!!block;n#Header#0" expanded="false" />
+            <element signature="n#!!block;n#handleSingleMode#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
+            <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
