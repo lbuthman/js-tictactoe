@@ -112,14 +112,83 @@ class GameBoard extends React.Component {
     return true;
   }
 
-  makeComputersMove() {
+  computeComputerMove() {
+    //take strategic center square if available
+    if (!this.state.squares[4]) {
+      return 4;
+    }
 
+    const squares = this.state.squares.slice();
+    let move = this.blockOpponent(squares);
+    if (move) {
+      return move;
+    }
+
+    //take next available square
     for (let i=0; i<this.state.squares.length; i++) {
       if (!this.state.squares[i]) {
-        setTimeout(() => this.makeMove(i), 700);
-        return;
+        return i;
       }
     }
+  }
+
+  getOpponentMoves(squares, opponent) {
+    let opponentMoves = Array(9).fill(null);
+
+    for (let i=0; i<squares.length; i++) {
+      if (squares[i] && squares[i].includes(opponent)) {
+        opponentMoves.push(i);
+      }
+    }
+
+    return opponentMoves;
+  }
+
+  blockOpponent(squares) {
+    let opponent = this.props.token === "Batman" ? "joker_suicide_squad" : "Super_Hero_1";
+
+    let opponentMoves = this.getOpponentMoves(squares, opponent);
+
+    if (opponentMoves.includes(0) && opponentMoves.includes(1) && !squares[2]) { return 2; }
+    if (opponentMoves.includes(0) && opponentMoves.includes(2) && !squares[1]) { return 1; }
+    if (opponentMoves.includes(1) && opponentMoves.includes(2) && !squares[0]) { return 0; }
+
+    if (opponentMoves.includes(3) && opponentMoves.includes(4) && !squares[5]) { return 5; }
+    if (opponentMoves.includes(3) && opponentMoves.includes(5) && !squares[4]) { return 4; }
+    if (opponentMoves.includes(4) && opponentMoves.includes(5) && !squares[3]) { return 3; }
+
+    if (opponentMoves.includes(6) && opponentMoves.includes(7) && !squares[8]) { return 8; }
+    if (opponentMoves.includes(6) && opponentMoves.includes(8) && !squares[7]) { return 7; }
+    if (opponentMoves.includes(7) && opponentMoves.includes(8) && !squares[6]) { return 6; }
+
+    if (opponentMoves.includes(0) && opponentMoves.includes(3) && !squares[6]) { return 6; }
+    if (opponentMoves.includes(0) && opponentMoves.includes(6) && !squares[3]) { return 3; }
+    if (opponentMoves.includes(3) && opponentMoves.includes(6) && !squares[0]) { return 0; }
+
+    if (opponentMoves.includes(1) && opponentMoves.includes(4) && !squares[7]) { return 7; }
+    if (opponentMoves.includes(1) && opponentMoves.includes(7) && !squares[4]) { return 4; }
+    if (opponentMoves.includes(4) && opponentMoves.includes(7) && !squares[1]) { return 1; }
+
+    if (opponentMoves.includes(2) && opponentMoves.includes(5) && !squares[8]) { return 8; }
+    if (opponentMoves.includes(2) && opponentMoves.includes(8) && !squares[5]) { return 5; }
+    if (opponentMoves.includes(8) && opponentMoves.includes(8) && !squares[2]) { return 2; }
+
+    if (opponentMoves.includes(0) && opponentMoves.includes(4) && !squares[8]) { return 8; }
+    if (opponentMoves.includes(0) && opponentMoves.includes(8) && !squares[4]) { return 4; }
+    if (opponentMoves.includes(4) && opponentMoves.includes(8) && !squares[0]) { return 0; }
+
+    if (opponentMoves.includes(2) && opponentMoves.includes(4) && !squares[6]) { return 6; }
+    if (opponentMoves.includes(2) && opponentMoves.includes(6) && !squares[4]) { return 4; }
+    if (opponentMoves.includes(4) && opponentMoves.includes(6) && !squares[2]) { return 2; }
+
+    return null;
+  }
+
+  makeComputersMove() {
+
+    let move = this.computeComputerMove();
+
+    setTimeout(() => this.makeMove(move), 700);
   }
 
   componentDidUpdate() {
