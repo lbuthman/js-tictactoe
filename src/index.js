@@ -119,7 +119,17 @@ class GameBoard extends React.Component {
     }
 
     const squares = this.state.squares.slice();
-    let move = this.blockOpponent(squares);
+
+    //play for the win
+    let computer = this.props.playerToken ==="Batman" ? "joker_suicide_squad" : "Super_Hero_1";
+    let move = this.playOpponent(squares, computer);
+    if (move) {
+      return move;
+    }
+
+    //defend to block opponent
+    let opponent = this.props.playerToken === "Batman" ? "Super_Hero_1" : "joker_suicide_squad";
+    move = this.playOpponent(squares, opponent);
     if (move) {
       return move;
     }
@@ -132,56 +142,55 @@ class GameBoard extends React.Component {
     }
   }
 
-  getOpponentMoves(squares, opponent) {
+  playOpponent(squares, player) {
+
+    const playersMoves = this.getPlayersMoves(squares, player);
+
+    if (playersMoves.includes(0) && playersMoves.includes(1) && !squares[2]) { return 2; }
+    if (playersMoves.includes(0) && playersMoves.includes(2) && !squares[1]) { return 1; }
+    if (playersMoves.includes(1) && playersMoves.includes(2) && !squares[0]) { return 0; }
+
+    if (playersMoves.includes(3) && playersMoves.includes(4) && !squares[5]) { return 5; }
+    if (playersMoves.includes(3) && playersMoves.includes(5) && !squares[4]) { return 4; }
+    if (playersMoves.includes(4) && playersMoves.includes(5) && !squares[3]) { return 3; }
+
+    if (playersMoves.includes(6) && playersMoves.includes(7) && !squares[8]) { return 8; }
+    if (playersMoves.includes(6) && playersMoves.includes(8) && !squares[7]) { return 7; }
+    if (playersMoves.includes(7) && playersMoves.includes(8) && !squares[6]) { return 6; }
+
+    if (playersMoves.includes(0) && playersMoves.includes(3) && !squares[6]) { return 6; }
+    if (playersMoves.includes(0) && playersMoves.includes(6) && !squares[3]) { return 3; }
+    if (playersMoves.includes(3) && playersMoves.includes(6) && !squares[0]) { return 0; }
+
+    if (playersMoves.includes(1) && playersMoves.includes(4) && !squares[7]) { return 7; }
+    if (playersMoves.includes(1) && playersMoves.includes(7) && !squares[4]) { return 4; }
+    if (playersMoves.includes(4) && playersMoves.includes(7) && !squares[1]) { return 1; }
+
+    if (playersMoves.includes(2) && playersMoves.includes(5) && !squares[8]) { return 8; }
+    if (playersMoves.includes(2) && playersMoves.includes(8) && !squares[5]) { return 5; }
+    if (playersMoves.includes(8) && playersMoves.includes(8) && !squares[2]) { return 2; }
+
+    if (playersMoves.includes(0) && playersMoves.includes(4) && !squares[8]) { return 8; }
+    if (playersMoves.includes(0) && playersMoves.includes(8) && !squares[4]) { return 4; }
+    if (playersMoves.includes(4) && playersMoves.includes(8) && !squares[0]) { return 0; }
+
+    if (playersMoves.includes(2) && playersMoves.includes(4) && !squares[6]) { return 6; }
+    if (playersMoves.includes(2) && playersMoves.includes(6) && !squares[4]) { return 4; }
+    if (playersMoves.includes(4) && playersMoves.includes(6) && !squares[2]) { return 2; }
+
+    return null;
+  }
+
+  getPlayersMoves(squares, player) {
     let opponentMoves = Array(9).fill(null);
 
     for (let i=0; i<squares.length; i++) {
-      if (squares[i] && squares[i].includes(opponent)) {
+      if (squares[i] && squares[i].includes(player)) {
         opponentMoves.push(i);
       }
     }
 
     return opponentMoves;
-  }
-
-  blockOpponent(squares) {
-    let opponent = this.props.token === "Batman" ? "joker_suicide_squad" : "Super_Hero_1";
-
-    let opponentMoves = this.getOpponentMoves(squares, opponent);
-
-    if (opponentMoves.includes(0) && opponentMoves.includes(1) && !squares[2]) { return 2; }
-    if (opponentMoves.includes(0) && opponentMoves.includes(2) && !squares[1]) { return 1; }
-    if (opponentMoves.includes(1) && opponentMoves.includes(2) && !squares[0]) { return 0; }
-
-    if (opponentMoves.includes(3) && opponentMoves.includes(4) && !squares[5]) { return 5; }
-    if (opponentMoves.includes(3) && opponentMoves.includes(5) && !squares[4]) { return 4; }
-    if (opponentMoves.includes(4) && opponentMoves.includes(5) && !squares[3]) { return 3; }
-
-    if (opponentMoves.includes(6) && opponentMoves.includes(7) && !squares[8]) { return 8; }
-    if (opponentMoves.includes(6) && opponentMoves.includes(8) && !squares[7]) { return 7; }
-    if (opponentMoves.includes(7) && opponentMoves.includes(8) && !squares[6]) { return 6; }
-
-    if (opponentMoves.includes(0) && opponentMoves.includes(3) && !squares[6]) { return 6; }
-    if (opponentMoves.includes(0) && opponentMoves.includes(6) && !squares[3]) { return 3; }
-    if (opponentMoves.includes(3) && opponentMoves.includes(6) && !squares[0]) { return 0; }
-
-    if (opponentMoves.includes(1) && opponentMoves.includes(4) && !squares[7]) { return 7; }
-    if (opponentMoves.includes(1) && opponentMoves.includes(7) && !squares[4]) { return 4; }
-    if (opponentMoves.includes(4) && opponentMoves.includes(7) && !squares[1]) { return 1; }
-
-    if (opponentMoves.includes(2) && opponentMoves.includes(5) && !squares[8]) { return 8; }
-    if (opponentMoves.includes(2) && opponentMoves.includes(8) && !squares[5]) { return 5; }
-    if (opponentMoves.includes(8) && opponentMoves.includes(8) && !squares[2]) { return 2; }
-
-    if (opponentMoves.includes(0) && opponentMoves.includes(4) && !squares[8]) { return 8; }
-    if (opponentMoves.includes(0) && opponentMoves.includes(8) && !squares[4]) { return 4; }
-    if (opponentMoves.includes(4) && opponentMoves.includes(8) && !squares[0]) { return 0; }
-
-    if (opponentMoves.includes(2) && opponentMoves.includes(4) && !squares[6]) { return 6; }
-    if (opponentMoves.includes(2) && opponentMoves.includes(6) && !squares[4]) { return 4; }
-    if (opponentMoves.includes(4) && opponentMoves.includes(6) && !squares[2]) { return 2; }
-
-    return null;
   }
 
   makeComputersMove() {
