@@ -86,7 +86,6 @@ class GameBoard extends React.Component {
     }
   }
 
-
   makeMove(i) {
     const squares = this.state.squares.slice();
     squares[i] = this.state.isBatmansTurn ? this.state.batmanToken : this.state.jokerToken;
@@ -97,32 +96,49 @@ class GameBoard extends React.Component {
     });
   }
 
-  makeComputersMove() {
+  canComputerMove() {
     if (this.props.playerMode === "dualPlayer") {
-      return;
+      return false;
     }
 
     if (this.state.nextTurn.includes(this.props.playerToken)) {
-      return;
+      return false;
     }
 
-    console.log("computer played a turn");
+    if (calculateWinner(this.state.squares) !== null) {
+      return false;
+    }
+
+    return true;
+  }
+
+  makeComputersMove() {
+
+    for (let i=0; i<this.state.squares.length; i++) {
+      if (!this.state.squares[i]) {
+        setTimeout(() => this.makeMove(i), 700);
+        return;
+      }
+    }
   }
 
   componentDidUpdate() {
     this.checkWinner();
-    this.makeComputersMove();
+
+    if (this.canComputerMove()) {
+      this.makeComputersMove();
+    }
   }
 
   componentDidMount() {
-    this.makeComputersMove();
+    if (this.canComputerMove()) {
+      this.makeComputersMove();
+    }
   }
 
   handlePlayAgain() {
     this.setState({
       squares: Array(9).fill(null),
-      isBatmansTurn: !this.state.isBatmansTurn,
-      nextTurn: this.state.isBatmansTurn ? "Joker's Turn" : "Batman's Turn",
       gameOver: false,
     })
   }
