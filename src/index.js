@@ -47,19 +47,12 @@ class GameBoard extends React.Component {
   }
 
   handleClick(i) {
-    const squares = this.state.squares.slice();
 
-    if (squares[i] || this.state.gameOver) {
+    if (this.state.squares[i] || this.state.gameOver) {
       return;
     }
 
-    squares[i] = this.state.isBatmansTurn ? this.state.batmanToken : this.state.jokerToken;
-    this.setState({
-      squares: squares,
-      isBatmansTurn: !this.state.isBatmansTurn,
-      nextTurn: this.state.isBatmansTurn ? "Joker's Turn" : "Batman's Turn",
-    });
-
+    this.makeMove(i);
   }
 
   handleWinner(winner) {
@@ -84,6 +77,7 @@ class GameBoard extends React.Component {
       gameOver: true,
     })
   }
+
   checkWinner() {
     const winner = calculateWinner(this.state.squares.slice());
 
@@ -91,8 +85,37 @@ class GameBoard extends React.Component {
       this.handleWinner(winner);
     }
   }
+
+
+  makeMove(i) {
+    const squares = this.state.squares.slice();
+    squares[i] = this.state.isBatmansTurn ? this.state.batmanToken : this.state.jokerToken;
+    this.setState({
+      squares: squares,
+      isBatmansTurn: !this.state.isBatmansTurn,
+      nextTurn: this.state.isBatmansTurn ? "Joker's Turn" : "Batman's Turn",
+    });
+  }
+
+  makeComputersMove() {
+    if (this.props.playerMode === "dualPlayer") {
+      return;
+    }
+
+    if (this.state.nextTurn.includes(this.props.playerToken)) {
+      return;
+    }
+
+    console.log("computer played a turn");
+  }
+
   componentDidUpdate() {
     this.checkWinner();
+    this.makeComputersMove();
+  }
+
+  componentDidMount() {
+    this.makeComputersMove();
   }
 
   handlePlayAgain() {
@@ -276,6 +299,8 @@ class WindowSequence extends React.Component {
     return (
       <GameBoard
         startOver={this.handleCallback}
+        playerMode={this.state.mode}
+        playerToken={this.state.token}
       />
     );
   }
