@@ -17,32 +17,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="114" column="24" lean-forward="false" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
+            <state relative-caret-position="186">
+              <caret line="79" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="439" selection-end-column="1" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#Square#0" expanded="false" />
                 <element signature="n#!!block;n#Status#0" expanded="false" />
                 <element signature="n#!!block;n#Controls#0" expanded="false" />
                 <element signature="n#!!block;n#handleClick#0;n#GameBoard#0" expanded="false" />
-                <element signature="n#!!block;n#handleWinner#0;n#GameBoard#0" expanded="false" />
-                <element signature="n#!!block;n#checkWinner#0;n#GameBoard#0" expanded="false" />
                 <element signature="n#!!block;n#makeMove#0;n#GameBoard#0" expanded="false" />
-                <element signature="n#!!block;n#canComputerMove#0;n#GameBoard#0" expanded="false" />
+                <element signature="n#!!block;n#componentDidMount#0;n#GameBoard#0" expanded="false" />
+                <element signature="n#!!block;n#checkWinner#0;n#GameBoard#0" expanded="false" />
+                <element signature="n#!!block;n#handleWinner#0;n#GameBoard#0" expanded="false" />
                 <element signature="n#!!block;n#computeComputerMove#0;n#GameBoard#0" expanded="false" />
                 <element signature="n#!!block;n#playOpponent#0;n#GameBoard#0" expanded="false" />
                 <element signature="n#!!block;n#getPlayersMoves#0;n#GameBoard#0" expanded="false" />
-                <element signature="n#!!block;n#makeComputersMove#0;n#GameBoard#0" expanded="false" />
-                <element signature="n#!!block;n#componentDidUpdate#0;n#GameBoard#0" expanded="false" />
-                <element signature="n#!!block;n#componentDidMount#0;n#GameBoard#0" expanded="false" />
                 <element signature="n#!!block;n#handlePlayAgain#0;n#GameBoard#0" expanded="false" />
                 <element signature="n#!!block;n#handleStartOver#0;n#GameBoard#0" expanded="false" />
                 <element signature="n#!!block;n#renderSquare#0;n#GameBoard#0" expanded="false" />
                 <element signature="n#!!block;n#renderStatus#0;n#GameBoard#0" expanded="false" />
-                <element signature="n#!!block;n#render#0;n#GameBoard#0" expanded="false" />
                 <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
                 <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
                 <element signature="n#!!block;n#Header#0" expanded="false" />
@@ -50,7 +46,7 @@
                 <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
                 <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
                 <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
-                <element signature="e#10135#10220#0" expanded="false" />
+                <element signature="e#10150#10235#0" expanded="false" />
                 <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
                 <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
                 <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
@@ -61,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="118" lean-forward="false" selection-start-line="9" selection-start-column="118" selection-end-line="9" selection-end-column="118" />
+            <state relative-caret-position="105">
+              <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -74,8 +70,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="86" column="4" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+            <state relative-caret-position="208">
+              <caret line="82" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="1" />
               <folding>
                 <element signature="e#2#18#0" expanded="false" />
                 <element signature="e#30#49#0" expanded="false" />
@@ -213,12 +209,12 @@
       <updated>1505927839124</updated>
       <workItem from="1505927840340" duration="662000" />
       <workItem from="1505946242331" duration="3615000" />
-      <workItem from="1505996490778" duration="39309000" />
+      <workItem from="1505996490778" duration="41256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43586000" />
+    <option name="totallyTimeSpent" value="45533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="163" y="23" width="1112" height="733" extended-state="0" />
@@ -254,7 +250,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -269,21 +265,17 @@
             <element signature="n#!!block;n#Status#0" expanded="false" />
             <element signature="n#!!block;n#Controls#0" expanded="false" />
             <element signature="n#!!block;n#handleClick#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#handleWinner#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#checkWinner#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#makeMove#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#canComputerMove#0;n#GameBoard#0" expanded="false" />
+            <element signature="n#!!block;n#componentDidMount#0;n#GameBoard#0" expanded="false" />
+            <element signature="n#!!block;n#checkWinner#0;n#GameBoard#0" expanded="false" />
+            <element signature="n#!!block;n#handleWinner#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#computeComputerMove#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#playOpponent#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#getPlayersMoves#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#makeComputersMove#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#componentDidUpdate#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#componentDidMount#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#handlePlayAgain#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#handleStartOver#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#renderSquare#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#renderStatus#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#render#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
             <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
@@ -291,7 +283,7 @@
             <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
-            <element signature="e#10135#10220#0" expanded="false" />
+            <element signature="e#10150#10235#0" expanded="false" />
             <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
@@ -337,21 +329,17 @@
             <element signature="n#!!block;n#Status#0" expanded="false" />
             <element signature="n#!!block;n#Controls#0" expanded="false" />
             <element signature="n#!!block;n#handleClick#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#handleWinner#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#checkWinner#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#makeMove#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#canComputerMove#0;n#GameBoard#0" expanded="false" />
+            <element signature="n#!!block;n#componentDidMount#0;n#GameBoard#0" expanded="false" />
+            <element signature="n#!!block;n#checkWinner#0;n#GameBoard#0" expanded="false" />
+            <element signature="n#!!block;n#handleWinner#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#computeComputerMove#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#playOpponent#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#getPlayersMoves#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#makeComputersMove#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#componentDidUpdate#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#componentDidMount#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#handlePlayAgain#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#handleStartOver#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#renderSquare#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#renderStatus#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#render#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
             <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
@@ -359,7 +347,7 @@
             <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
-            <element signature="e#10135#10220#0" expanded="false" />
+            <element signature="e#10150#10235#0" expanded="false" />
             <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
@@ -405,18 +393,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="118" lean-forward="false" selection-start-line="9" selection-start-column="118" selection-end-line="9" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="86" column="4" lean-forward="true" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
+        <state relative-caret-position="208">
+          <caret line="82" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="1" />
           <folding>
             <element signature="e#2#18#0" expanded="false" />
             <element signature="e#30#49#0" expanded="false" />
@@ -433,29 +413,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="114" column="24" lean-forward="false" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
+        <state relative-caret-position="186">
+          <caret line="79" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="439" selection-end-column="1" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#Square#0" expanded="false" />
             <element signature="n#!!block;n#Status#0" expanded="false" />
             <element signature="n#!!block;n#Controls#0" expanded="false" />
             <element signature="n#!!block;n#handleClick#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#handleWinner#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#checkWinner#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#makeMove#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#canComputerMove#0;n#GameBoard#0" expanded="false" />
+            <element signature="n#!!block;n#componentDidMount#0;n#GameBoard#0" expanded="false" />
+            <element signature="n#!!block;n#checkWinner#0;n#GameBoard#0" expanded="false" />
+            <element signature="n#!!block;n#handleWinner#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#computeComputerMove#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#playOpponent#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#getPlayersMoves#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#makeComputersMove#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#componentDidUpdate#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#componentDidMount#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#handlePlayAgain#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#handleStartOver#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#renderSquare#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#renderStatus#0;n#GameBoard#0" expanded="false" />
-            <element signature="n#!!block;n#render#0;n#GameBoard#0" expanded="false" />
             <element signature="n#!!block;n#ModeDialog#0" expanded="false" />
             <element signature="n#!!block;n#TokenDialog#0" expanded="false" />
             <element signature="n#!!block;n#Header#0" expanded="false" />
@@ -463,13 +439,21 @@
             <element signature="n#!!block;n#handleDualMode#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#handleTokenBatman#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#handleTokenJoker#0;n#WindowSequence#0" expanded="false" />
-            <element signature="e#10135#10220#0" expanded="false" />
+            <element signature="e#10150#10235#0" expanded="false" />
             <element signature="n#!!block;n#renderTokenDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderModeDialog#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#renderBoard#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#render#0;n#WindowSequence#0" expanded="false" />
             <element signature="n#!!block;n#calculateWinner#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

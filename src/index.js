@@ -55,6 +55,39 @@ class GameBoard extends React.Component {
     this.makeMove(i);
   }
 
+  makeMove(i) {
+    const squares = this.state.squares.slice();
+    squares[i] = this.state.isBatmansTurn ? this.state.batmanToken : this.state.jokerToken;
+    this.setState({
+      squares: squares,
+      isBatmansTurn: !this.state.isBatmansTurn,
+      nextTurn: this.state.isBatmansTurn ? "Joker's Turn" : "Batman's Turn",
+    });
+  }
+
+  componentDidMount() {
+    if (this.canComputerMove()) {
+      this.makeComputersMove();
+    }
+  }
+
+  componentDidUpdate() {
+    this.checkWinner();
+
+    if (this.canComputerMove()) {
+      this.makeComputersMove();
+    }
+  }
+
+  checkWinner() {
+    const winner = calculateWinner(this.state.squares.slice());
+
+    if (winner) {
+      this.handleWinner(winner);
+      return true;
+    }
+  }
+
   handleWinner(winner) {
     if (this.state.gameOver) {
       return;
@@ -78,24 +111,6 @@ class GameBoard extends React.Component {
     })
   }
 
-  checkWinner() {
-    const winner = calculateWinner(this.state.squares.slice());
-
-    if (winner) {
-      this.handleWinner(winner);
-    }
-  }
-
-  makeMove(i) {
-    const squares = this.state.squares.slice();
-    squares[i] = this.state.isBatmansTurn ? this.state.batmanToken : this.state.jokerToken;
-    this.setState({
-      squares: squares,
-      isBatmansTurn: !this.state.isBatmansTurn,
-      nextTurn: this.state.isBatmansTurn ? "Joker's Turn" : "Batman's Turn",
-    });
-  }
-
   canComputerMove() {
     if (this.props.playerMode === "dualPlayer") {
       return false;
@@ -111,7 +126,12 @@ class GameBoard extends React.Component {
 
     return true;
   }
+  makeComputersMove() {
 
+    let move = this.computeComputerMove();
+
+    setTimeout(() => this.makeMove(move), 700);
+  }
   computeComputerMove() {
     //take strategic center square if available
     if (!this.state.squares[4]) {
@@ -141,7 +161,6 @@ class GameBoard extends React.Component {
       }
     }
   }
-
   playOpponent(squares, player) {
 
     const playersMoves = this.getPlayersMoves(squares, player);
@@ -180,7 +199,6 @@ class GameBoard extends React.Component {
 
     return null;
   }
-
   getPlayersMoves(squares, player) {
     let opponentMoves = Array(9).fill(null);
 
@@ -191,27 +209,6 @@ class GameBoard extends React.Component {
     }
 
     return opponentMoves;
-  }
-
-  makeComputersMove() {
-
-    let move = this.computeComputerMove();
-
-    setTimeout(() => this.makeMove(move), 700);
-  }
-
-  componentDidUpdate() {
-    this.checkWinner();
-
-    if (this.canComputerMove()) {
-      this.makeComputersMove();
-    }
-  }
-
-  componentDidMount() {
-    if (this.canComputerMove()) {
-      this.makeComputersMove();
-    }
   }
 
   handlePlayAgain() {
