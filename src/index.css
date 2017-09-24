@@ -108,3 +108,16 @@ td {
   width: 120px;
   margin: 10px 10px 10px 10px;
 }
+
+footer {
+  background: #008DD5;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 0 8px 0 8px;
+  bottom: 0;
+  z-index: 1;
+}
+
+a {
+  color: #0D252F;
+}
